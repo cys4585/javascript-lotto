@@ -1,4 +1,4 @@
-import styles from "./style.css";
+import "./style.css";
 import LOTTO_SYSTEM from "../../../../constants/lottoSystem";
 
 function calculateTotalRanking(rankings) {
