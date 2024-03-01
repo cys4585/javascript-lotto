@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.css";
 
 class PurchasedLottoes {
   #$parent;

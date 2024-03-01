@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.css";
 import PurchasedLottoes from "../components/PurchasedLottoes";
 import PurchaseAmount from "../components/PurchaseAmount";
 import WinningLotto from "../components/WinningLotto";

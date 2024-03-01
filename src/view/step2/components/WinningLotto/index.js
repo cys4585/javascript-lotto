@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.css";
 import WinningNumbers from "./WinningNumbers";
 import BonusNumber from "./BonusNumber";
 
