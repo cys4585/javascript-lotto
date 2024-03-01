@@ -1,19 +1,15 @@
-import PurchasedLottoes from "./components/PurchasedLottoes";
-import PurchaseAmount from "./components/PurchaseAmount";
-import WinningLotto from "./components/WinningLotto";
-import DrawButton from "./components/DrawButton";
-import ResultModal from "./components/ResultModal";
+import "./style.css";
+import PurchasedLottoes from "../components/PurchasedLottoes";
+import PurchaseAmount from "../components/PurchaseAmount";
+import WinningLotto from "../components/WinningLotto";
+import DrawButton from "../components/DrawButton";
+import ResultModal from "../components/ResultModal";
 
 class LottoGameView {
-  #state;
-
-  constructor() {
-    this.#state = {
-      winningNumbers: Array.from({ length: 6 }).fill(""),
-      bonusNumber: "",
-      isModalOpen: false,
-    };
-  }
+  #state = {
+    winningNumbers: Array.from({ length: 6 }).fill(""),
+    bonusNumber: "",
+  };
 
   #setBonusNumber(bonusNumber) {
     this.#setState({ ...this.#state, bonusNumber });
@@ -48,8 +44,6 @@ class LottoGameView {
     new PurchaseAmount(document.querySelector("#container"), {
       onPurchaseAmountButtonClick,
     }).render();
-
-    // this.#resultModalComponent.render(),
   }
 
   renderPurchasedLottoes({ lottoes }) {
@@ -75,7 +69,7 @@ class LottoGameView {
   }
 
   renderResultModal({ rankings, totalProfitRate, onRetryButtonClick }) {
-    new ResultModal(document.querySelector("#app"), {
+    new ResultModal(document.querySelector("#container"), {
       rankings,
       totalProfitRate,
       onRetryButtonClick,
